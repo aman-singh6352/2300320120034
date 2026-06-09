@@ -11,6 +11,9 @@ async function Log(stack, level, package_name, message) {
     try {
         const response = await fetch(TEST_SERVER_URL, {
             method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(requestBody),
         });
 
